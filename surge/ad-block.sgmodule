@@ -1,0 +1,18 @@
+#!name=去广告-精简版
+#!desc=使用 skk.moe 域名+规则集去广告
+#!author=豆包
+#!category=Advertising
+
+[General]
+
+[Host]
+
+[Rule]
+# 域名黑名单
+DOMAIN-SET,https://ruleset.skk.moe/List/domainset/reject.conf,REJECT
+
+# 非IP规则（含extended-matching）
+RULE-SET,https://ruleset.skk.moe/List/non_ip/reject.conf,REJECT,extended-matching
+
+DOMAIN-SET,https://ruleset.skk.moe/List/domainset/reject.conf,REJECT
+RULE-SET,https://ruleset.skk.moe/List/non_ip/reject.conf,REJECT,extended-matching
