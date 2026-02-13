@@ -1,0 +1,10 @@
+#!name=Telegram 客户端跳转
+#!desc=拦截 t.me 链接并无感跳转至指定的第三方客户端。请在下方选择你想要默认打开的客户端。
+#!param=client, type=select, options="official, nicegram, swiftgram, turrit, ime", value="nicegram", desc="选择默认打开的客户端"
+
+[Script]
+# 注意：如果你的 js 文件不在 Surge 根目录，请修改下方 script-path 的相对或绝对路径
+Telegram-Redirect = type=http-request, pattern=^https?:\/\/(t|telegram)\.me\/.*, script-path=telegram_redirect.js, requires-body=false, argument=%client%
+
+[MITM]
+hostname = %APPEND% t.me, telegram.me
