@@ -3,7 +3,7 @@
 
 [Script]
 # 请确保 script-path 指向了正确的 JS 文件路径
-Turrit-Redirect = type=http-request, pattern=^https?:\/\/(t|telegram)\.me\/.*, script-path=telegram_redirect.js, requires-body=false
+Turrit-Redirect = type=http-request, pattern=^https?:\/\/(t|telegram)\.me\/.*, script-path=https://raw.githubusercontent.com/Adek2012/rule/refs/heads/main/surge/telegram_redirect.js, requires-body=false
 
 [MITM]
 hostname = %APPEND% t.me, telegram.me
