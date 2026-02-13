@@ -4,7 +4,7 @@
 
 [Script]
 # 注意：如果你的 js 文件不在 Surge 根目录，请修改下方 script-path 的相对或绝对路径
-Telegram-Redirect = type=http-request, pattern=^https?:\/\/(t|telegram)\.me\/.*, script-path=telegram_redirect.js, requires-body=false, argument=%client%
+Telegram-Redirect = type=http-request, pattern=^https?:\/\/(t|telegram)\.me\/.*, script-path=https://raw.githubusercontent.com/Adek2012/rule/refs/heads/main/surge/telegram_redirect.js, requires-body=false, argument=%client%
 
 [MITM]
 hostname = %APPEND% t.me, telegram.me
